@@ -1,0 +1,140 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e0eafc, #cfdef3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  animation: fadeIn 1s ease-in;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Signup container with glassmorphism */
+.signup-container {
+  width: 90%;
+  max-width: 400px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  color: #000;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+/* On hover, elevate it slightly */
+.signup-container:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
+}
+
+/* Headings */
+.signup-container h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Labels */
+.signup-container label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+
+/* Input fields */
+.signup-container input {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  margin-bottom: 1rem;
+  transition: background 0.3s ease;
+}
+
+.signup-container input::placeholder {
+  color: #ccc;
+}
+
+.signup-container input:focus {
+  outline: none;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Button styling */
+.signup-container button {
+  width: 100%;
+  padding: 0.9rem;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+.signup-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  .signup-container {
+    padding: 1.5rem;
+    backdrop-filter: blur(8px);
+  }
+
+  .signup-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .signup-container input,
+  .signup-container button {
+    font-size: 0.95rem;
+  }
+}
+
+.back-home-button {
+  margin-top: 1.5rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #64748b; /* slate-500 */
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.back-home-button:hover {
+  background-color: #475569; /* slate-600 */
+}
